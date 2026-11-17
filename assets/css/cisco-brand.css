@@ -1653,3 +1653,216 @@ p { text-wrap: pretty; }
   .footer-bottom { gap: 12px; }
 }
 
+/* ==========================================================================
+   Pass 2 — layout rhythm and colour blocking
+   ========================================================================== */
+
+/* Hero quick links become four colour-blocked tiles ----------------------- */
+.hero-quicklinks {
+  margin-top: clamp(36px, 4.5vw, 60px);
+  border-top: 0;
+  background: transparent;
+}
+.hero-quicklinks-inner {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  background: rgba(255, 255, 255, .22);
+  border: 1px solid rgba(255, 255, 255, .22);
+}
+.hero-quicklinks a.quicklink {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 26px;
+  min-height: 114px;
+  padding: 18px 20px;
+  border: 0;
+  border-right: 0;
+  background: #fff;
+  color: var(--navy);
+  transition: filter .18s ease;
+}
+.hero-quicklinks a.quicklink:first-child,
+.hero-quicklinks a.quicklink:last-child,
+.hero-quicklinks a.quicklink:nth-child(odd),
+.hero-quicklinks a.quicklink:nth-child(even) { padding: 18px 20px; border: 0; }
+.quicklink-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: inherit;
+}
+.quicklink-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  font-size: 14.5px;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  color: inherit;
+}
+.quicklink .icon { width: 17px; height: 17px; flex: none; transition: transform .18s ease; }
+.quicklink:hover .icon { transform: translateX(3px); }
+.quicklink:hover { filter: brightness(.96); }
+
+.hero-quicklinks a.quicklink-blue { background: var(--blue); color: #06253F; }
+.hero-quicklinks a.quicklink-sky { background: #E6F4FA; color: var(--navy); }
+.hero-quicklinks a.quicklink-sky .quicklink-label { color: #3C5567; }
+.hero-quicklinks a.quicklink-deep { background: #0A1F3D; color: #fff; }
+.hero-quicklinks a.quicklink-deep .quicklink-label { color: #9FB4C7; }
+.hero-quicklinks a.quicklink-deep .icon { color: #4FC6EE; }
+.hero-quicklinks a.quicklink-white { background: #fff; color: var(--navy); }
+.hero-quicklinks a.quicklink-white .quicklink-label { color: #3C5567; }
+
+/* At a glance becomes a solid Cisco-blue band ----------------------------- */
+.proof {
+  background: var(--blue);
+  border-bottom: 0;
+}
+.proof > .container { padding-block: clamp(44px, 5vw, 64px); }
+.proof .eyebrow { color: #06253F; }
+.proof .eyebrow::before { background: #06253F; }
+.proof-title { color: #06253F; }
+.proof-badge {
+  background: #fff;
+  border-color: rgba(6, 37, 63, .22);
+  color: #06253F;
+}
+.proof-badge .icon { color: #06253F; }
+.proof-grid { border-top: 1px solid rgba(6, 37, 63, .28); }
+.proof-item {
+  border-right: 1px solid rgba(6, 37, 63, .28);
+  border-top: 3px solid transparent;
+}
+.proof-item:hover { border-top-color: #0A1F3D; }
+.proof-item dt { color: #06304A; }
+.proof-item dd,
+.proof-item dd small { color: #06253F; }
+.module-marquee {
+  background: #fff;
+  border-top: 1px solid #E9ECEF;
+  border-bottom: 1px solid #E9ECEF;
+}
+
+/* Audience — one dark feature card plus colour-coded rails ---------------- */
+.audience-grid { border-color: var(--line); background: var(--line); gap: 1px; }
+.audience-card { border-right: 0; border-bottom: 0; border-top: 3px solid #B9C4CE; }
+.audience-card:nth-child(2) { border-top-color: var(--blue); }
+.audience-card:nth-child(3) { border-top-color: #007A8C; }
+.audience-card:nth-child(4) { border-top-color: #F5A623; }
+.audience-card:nth-child(2) .audience-icon { background: #E6F4FA; color: #036B96; }
+.audience-card:nth-child(3) .audience-icon { background: #E0F2F5; color: #00697A; }
+.audience-card:nth-child(4) .audience-icon { background: #FDF3E3; color: #8A560E; }
+
+.audience-card:first-child {
+  background: var(--navy);
+  border-top-color: var(--blue);
+  color: #fff;
+}
+.audience-card:first-child:hover { background: #12305C; border-top-color: var(--blue); }
+.audience-card:first-child h3 { color: #fff; }
+.audience-card:first-child > p { color: #C2D1E0; }
+.audience-card:first-child .audience-icon { background: rgba(255, 255, 255, .12); color: #7FD0EE; }
+.audience-card:first-child .audience-ideal { color: #B9C9D9; border-color: rgba(255, 255, 255, .22); }
+.audience-card:first-child .audience-ideal span { color: #7FD0EE; }
+.audience-card:first-child .audience-note {
+  background: rgba(255, 255, 255, .1);
+  border-color: rgba(255, 255, 255, .28);
+  color: #E6F4FA;
+}
+
+/* Pricing — three distinct colour tiers ----------------------------------- */
+.price-card { border-top: 3px solid #C9D2DA; }
+.price-card.is-featured { border-top-color: var(--blue); }
+.price-card:last-child {
+  background: #E6F4FA;
+  border-top-color: #036B96;
+}
+.price-card:last-child h3,
+.price-card:last-child .price-amount,
+.price-card:last-child .price-currency { color: var(--navy); }
+.price-card:last-child .plan-tier { color: #036B96; }
+.price-card:last-child .price-card-head p,
+.price-card:last-child .price-period,
+.price-card:last-child .price-fine { color: #3C5567; }
+.price-card:last-child .price-features li { color: #23405A; border-color: rgba(13, 39, 77, .15); }
+.price-card:last-child .price-features li .icon { color: #036B96; }
+.price-card:last-child .price-includes { color: #3C5567; border-color: rgba(13, 39, 77, .15); }
+
+/* Closing CTA — blue action panel on the navy band ----------------------- */
+.cta-actions {
+  align-self: stretch;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 24px;
+  background: var(--blue);
+}
+.cta-actions-label {
+  margin-bottom: 2px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #06253F;
+}
+.cta-actions .btn-light {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+}
+.cta-actions .btn-light:hover {
+  background: #0A1F3D;
+  border-color: #0A1F3D;
+  color: #fff;
+}
+.cta-actions .btn-outline-light {
+  border-color: rgba(6, 37, 63, .55);
+  color: #06253F;
+}
+.cta-actions .btn-outline-light:hover {
+  background: #06253F;
+  border-color: #06253F;
+  color: #fff;
+}
+
+/* Module explorer — alternate the layout and tint wells per app ----------- */
+.apps-stage.is-tabbed .app-panel-visual {
+  background: var(--tint-soft);
+  border-top: 3px solid var(--accent);
+}
+.apps-stage.is-tabbed .app-panel:nth-child(even) .app-panel-copy { order: 2; }
+.apps-stage.is-tabbed .app-panel:nth-child(even) .app-panel-visual { order: 1; }
+
+/* Roles sit on a pale blue field ----------------------------------------- */
+.workspace-roles { background: #E9F6FB; }
+
+@media (max-width: 1024px) {
+  .hero-quicklinks-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero-quicklinks a.quicklink { min-height: 104px; }
+  .apps-stage.is-tabbed .app-panel:nth-child(even) .app-panel-copy,
+  .apps-stage.is-tabbed .app-panel:nth-child(even) .app-panel-visual { order: 0; }
+  .cta-actions { flex-wrap: wrap; align-items: center; }
+  .cta-actions-label { flex: 1 1 100%; margin-bottom: 4px; }
+}
+
+@media (max-width: 640px) {
+  .hero-quicklinks-inner { grid-template-columns: 1fr; }
+  .hero-quicklinks a.quicklink,
+  .hero-quicklinks a.quicklink:first-child,
+  .hero-quicklinks a.quicklink:last-child,
+  .hero-quicklinks a.quicklink:nth-child(odd),
+  .hero-quicklinks a.quicklink:nth-child(even) { padding: 16px 18px; min-height: 0; }
+  .quicklink-title { font-size: 14px; }
+  .proof-item { border-right: 0; }
+  .proof-item:nth-child(2n) { border-right: 0; }
+  .proof-item:nth-child(-n+2) { border-bottom: 1px solid rgba(6, 37, 63, .28); }
+  .audience-card { border-right: 0; }
+  .cta-actions { flex-direction: column; flex-wrap: nowrap; align-items: stretch; padding: 18px; }
+}
+
+
