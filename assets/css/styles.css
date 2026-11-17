@@ -34,7 +34,6 @@
   --blue-dark: #00547D;
   --blue-soft: #E8F1F7;
   --steel: #5599BB;
-  --teal: #0F766E;
   --amber: #FFB343;
   --line: #DEE7EC;
   --line-soft: #EAF1F4;
@@ -1228,11 +1227,11 @@ h1, h2, h3, h4, p, dl, dd { margin: 0; }
 .audience-rings {
   position: absolute;
   right: -190px;
-  top: 50%;
+  top: 40%;
   width: min(720px, 70vw);
   transform: translateY(-50%);
-  color: var(--blue);
-  opacity: .09;
+  color: #E8710A;
+  opacity: .07;
   pointer-events: none;
   z-index: 0;
 }
@@ -1262,19 +1261,53 @@ h1, h2, h3, h4, p, dl, dd { margin: 0; }
 .audience-card .audience-note { transition: color .3s ease, background-color .3s ease, border-color .3s ease; }
 .audience-card:hover {
   transform: translateY(-2px);
-  background: var(--teal);
-  border-color: var(--teal);
+  background: #001E2D;
+  border-color: #001E2D;
   color: #fff;
-  box-shadow: 0 26px 52px -36px rgba(15, 118, 110, .55);
+  box-shadow: 0 26px 52px -36px rgba(0, 30, 45, .6);
 }
 .audience-card:hover h3 { color: #fff; }
-.audience-card:hover > p { color: rgba(255, 255, 255, .92); }
-.audience-card:hover .audience-icon { background: rgba(255, 255, 255, .16); border-color: rgba(255, 255, 255, .24); color: #fff; }
-.audience-card:hover .audience-ideal { border-top-color: rgba(255, 255, 255, .32); color: rgba(255, 255, 255, .92); }
-.audience-card:hover .audience-ideal span { color: #D7F7EF; }
-.audience-card:hover .audience-note { background: #fff; border-color: #fff; color: #0B5E66; }
-.audience-icon { display: grid; place-items: center; width: 42px; height: 42px; margin-bottom: 18px; border: 1px solid #E0EBF1; border-radius: 11px; background: #F1F7FA; color: var(--blue); }
-.audience-icon .icon { width: 20px; height: 20px; }
+.audience-card:hover > p { color: #C3D7E1; }
+.audience-card:hover .audience-icon {
+  background: #fff;
+  border-color: rgba(255, 255, 255, .9);
+  color: #001E2D;
+  box-shadow: inset 0 1px 0 #fff, 0 10px 20px -14px rgba(0, 0, 0, .9);
+}
+.audience-card:hover .audience-ideal { border-top-color: rgba(255, 255, 255, .18); color: #C3D7E1; }
+.audience-card:hover .audience-ideal span { color: #8FC2D8; }
+.audience-card:hover .audience-note { background: #fff; border-color: #fff; color: #001E2D; }
+.audience-icon {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 18px;
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: 14px;
+  background: linear-gradient(155deg, #262626 0%, #121212 48%, #000 100%);
+  color: #fff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .16), inset 0 -10px 16px rgba(0, 0, 0, .55), 0 12px 22px -16px rgba(0, 0, 0, .85);
+  transition: background-color .3s ease, border-color .3s ease, color .3s ease, box-shadow .3s ease;
+}
+.audience-icon .icon {
+  width: 18px;
+  height: 18px;
+  margin-bottom: 8px;
+  stroke-width: 1.7;
+}
+.audience-icon::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 8px;
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid #E2231A;
+  border-bottom: 2px solid #E2231A;
+  transform: translateX(-50%) rotate(-45deg);
+}
 .audience-card h3 { font-size: 19px; font-weight: 640; line-height: 1.25; letter-spacing: -.022em; color: var(--navy); }
 .audience-card > p { max-width: 440px; margin-top: 9px; font-size: 13px; line-height: 1.65; color: #5B7180; }
 .audience-ideal { margin-top: 16px; padding-top: 14px; border-top: 1px dashed #DDE7EC; font-size: 11.5px; line-height: 1.55; color: #5B7280; }
