@@ -639,7 +639,7 @@
         if (!target) return;
         event.preventDefault();
         setMenu(false);
-        var offset = hash === '#apps-stage' ? 0 : 104;
+        var offset = hash === '#apps-stage' ? 0 : 84;
         gsap.to(window, {
           duration: .9,
           ease: 'power2.inOut',

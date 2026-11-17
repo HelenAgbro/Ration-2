@@ -6,7 +6,7 @@
   <title>Ration — Communicate and collaborate seamlessly</title>
   <meta name="description" content="Ration gives organisations one secure workspace for mail, chat, meetings, calendar, contacts, tasks, notes and forms. One directory, one login, sovereign by design.">
   <link rel="canonical" href="https://www.ration.works/">
-  <meta name="theme-color" content="#0D274D">
+  <meta name="theme-color" content="#002B40">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Ration">
@@ -24,7 +24,6 @@
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/img/app-mail.webp" as="image" type="image/webp" fetchpriority="high">
   <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="stylesheet" href="assets/css/cisco-brand.css">
   <script>if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) { document.documentElement.classList.add("reduce-motion"); }</script>
 
   <script type="application/ld+json">
@@ -103,18 +102,6 @@
   </svg>
 
   <header class="nav" id="top">
-    <div class="nav-utility">
-      <div class="nav-utility-inner">
-        <p class="nav-utility-note">Ration — a Stackchase Limited product</p>
-        <nav class="nav-utility-links" aria-label="Utility">
-          <a href="https://support.ration.works/">Support</a>
-          <a href="https://support.ration.works/guides/" target="_blank" rel="noopener">Documentation</a>
-          <a href="https://www.ration.works/contact">Contact sales</a>
-          <span class="nav-locale">English (NG)</span>
-        </nav>
-      </div>
-    </div>
-
     <div class="nav-inner">
       <a class="nav-logo" href="#home" aria-label="Ration home">
         <img src="assets/img/ration-logo.svg" alt="Ration" width="120" height="34">
@@ -122,71 +109,18 @@
 
       <nav class="nav-links" aria-label="Primary">
         <a class="nav-link is-active" href="#home">Home</a>
-        <button class="nav-link nav-menu-btn" type="button" id="nav-products" aria-expanded="false" aria-controls="nav-mega">
-          Products
-          <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"></use></svg>
-        </button>
-        <a class="nav-link" href="#who">Solutions</a>
+        <a class="nav-link" href="#features">Features</a>
         <a class="nav-link" href="#pricing">Pricing</a>
-        <a class="nav-link" href="#stories">Security</a>
-        <a class="nav-link" href="#deploy">Deployment</a>
-        <a class="nav-link" href="https://support.ration.works/guides/" target="_blank" rel="noopener">Resources</a>
+        <a class="nav-link" href="https://support.ration.works/guides/" target="_blank" rel="noopener">Docs</a>
+        <a class="nav-link" href="#contact">Contact</a>
       </nav>
 
       <div class="nav-actions">
-        <a class="nav-login" href="https://app.ration.works/" target="_blank" rel="noopener">Log in</a>
-        <a class="btn btn-primary nav-cta" href="https://app.ration.works/register" target="_blank" rel="noopener">Get started</a>
+        <a class="btn btn-quiet nav-open" href="https://app.ration.works/" target="_blank" rel="noopener">Open App</a>
+        <a class="btn btn-primary nav-cta" href="https://app.ration.works/register" target="_blank" rel="noopener">Get Started</a>
         <button class="nav-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
           <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
         </button>
-      </div>
-    </div>
-
-    <div class="nav-mega" id="nav-mega" hidden>
-      <div class="nav-mega-inner">
-        <div>
-          <p class="nav-mega-label">The eight apps</p>
-          <div class="nav-mega-grid">
-            <a class="mega-link" href="#apps-stage">
-              <svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg>
-              <span><b>Mail</b><small>Business email with 25 GB per user</small></span>
-            </a>
-            <a class="mega-link" href="#apps-stage">
-              <svg class="icon" aria-hidden="true"><use href="#i-chat"></use></svg>
-              <span><b>Chat</b><small>Channels, direct messages and threads</small></span>
-            </a>
-            <a class="mega-link" href="#apps-stage">
-              <svg class="icon" aria-hidden="true"><use href="#i-meet"></use></svg>
-              <span><b>Meet</b><small>Video and audio rooms for every team</small></span>
-            </a>
-            <a class="mega-link" href="#apps-stage">
-              <svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg>
-              <span><b>Calendar</b><small>Shared availability and invitations</small></span>
-            </a>
-            <a class="mega-link" href="#apps-stage">
-              <svg class="icon" aria-hidden="true"><use href="#i-contacts"></use></svg>
-              <span><b>Contact</b><small>One directory across every module</small></span>
-            </a>
-            <a class="mega-link" href="#apps-stage">
-              <svg class="icon" aria-hidden="true"><use href="#i-tasks"></use></svg>
-              <span><b>Tasks</b><small>Assignments, boards and follow-through</small></span>
-            </a>
-            <a class="mega-link" href="#apps-stage">
-              <svg class="icon" aria-hidden="true"><use href="#i-notes"></use></svg>
-              <span><b>Notes</b><small>Shared documents and team wiki</small></span>
-            </a>
-            <a class="mega-link" href="#apps-stage">
-              <svg class="icon" aria-hidden="true"><use href="#i-forms"></use></svg>
-              <span><b>Forms</b><small>Structured data routed into workflows</small></span>
-            </a>
-          </div>
-        </div>
-        <aside class="mega-feature">
-          <p class="nav-mega-label">Featured</p>
-          <h3>Ration Cloud</h3>
-          <p>Live in Lagos today, with Casablanca, Nairobi, Kinshasa and Cape Town planned. Keep residency and jurisdiction where your policy requires them.</p>
-          <a class="link-arrow" href="#cloud">Explore the regions <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
-        </aside>
       </div>
     </div>
   </header>
@@ -194,15 +128,13 @@
   <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
     <nav class="mobile-menu-inner" aria-label="Mobile">
       <a href="#home">Home</a>
-      <a href="#features">Products</a>
-      <a href="#who">Solutions</a>
+      <a href="#features">Features</a>
       <a href="#pricing">Pricing</a>
-      <a href="#stories">Security</a>
-      <a href="#deploy">Deployment</a>
-      <a href="https://support.ration.works/guides/" target="_blank" rel="noopener">Resources</a>
+      <a href="https://support.ration.works/guides/" target="_blank" rel="noopener">Docs</a>
+      <a href="#contact">Contact</a>
       <div class="mobile-menu-actions">
-        <a class="btn btn-outline" href="https://app.ration.works/" target="_blank" rel="noopener">Log in</a>
-        <a class="btn btn-primary" href="https://app.ration.works/register" target="_blank" rel="noopener">Get started</a>
+        <a class="btn btn-ghost" href="https://app.ration.works/" target="_blank" rel="noopener">Open App</a>
+        <a class="btn btn-primary" href="https://app.ration.works/register" target="_blank" rel="noopener">Get Started</a>
       </div>
     </nav>
   </div>
@@ -210,44 +142,44 @@
   <main id="main">
     <section class="hero" id="home">
       <div class="hero-bg" aria-hidden="true">
+        <span class="hero-glow hero-glow-a"></span>
+        <span class="hero-glow hero-glow-b"></span>
         <span class="hero-grid"></span>
       </div>
 
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <p class="hero-eyebrow" data-reveal>Secure collaboration platform</p>
-          <h1 class="hero-title" data-hero="title">
-            Work. Communicate.<br>Collaborate. <span class="hero-accent">Securely.</span>
-          </h1>
+      <div class="container hero-copy">
+        <h1 class="hero-title" data-hero="title">
+          Work. Communicate. Collaborate.<br>
+          <span class="hero-rotate" data-hero-rotate>
+            <span class="hero-rotate-track" data-hero-rotate-track>
+              <span class="hero-rotate-word is-active">Seamlessly.</span>
+              <span class="hero-rotate-word">All-in-one place.</span>
+              <span class="hero-rotate-word">Securely.</span>
+              <span class="hero-rotate-word hero-rotate-clone" aria-hidden="true">Seamlessly.</span>
+            </span>
+          </span>
+        </h1>
 
-          <p class="hero-sub" data-hero="sub">
-            One secure workspace for communication, collaboration and getting work
-            done — one directory, one login, sovereign by design.
-          </p>
+        <p class="hero-sub" data-hero="sub">
+          Ration gives organisations one secure workspace for communication,
+          collaboration and getting work done.
+        </p>
 
-          <div class="hero-actions" data-hero="actions">
-            <a class="btn btn-primary btn-lg" href="https://app.ration.works/register" target="_blank" rel="noopener">
-              Get started
-              <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
-            </a>
-            <a class="btn btn-outline-light btn-lg" href="https://explore.ration.works/mail" target="_blank" rel="noopener">
-              Take a 5-minute tour
-              <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
-            </a>
-          </div>
-
-          <p class="hero-trust">
-            <svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg>
-            Trusted where control matters — government, defence and regulated industries
-          </p>
+        <div class="hero-actions" data-hero="actions">
+          <a class="btn btn-primary btn-lg" href="https://app.ration.works/register" target="_blank" rel="noopener">
+            Get Started
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+          <a class="btn btn-outline btn-lg" href="https://explore.ration.works/mail" target="_blank" rel="noopener">
+            Take a 5-minute tour
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
+          </a>
+          <a class="btn btn-link btn-lg" href="#features">Learn More</a>
         </div>
+      </div>
 
-        <div class="hero-showcase-wrap">
-          <div class="hero-showcase" data-hero="showcase">
-            <div class="hero-panel-head">
-              <span class="hero-panel-label">Inside the workspace</span>
-              <span class="hero-panel-meta">Live product preview</span>
-            </div>
+      <div class="hero-showcase-wrap">
+        <div class="hero-showcase" data-hero="showcase">
           <div class="hero-stage" data-hero-stage data-hero-slider role="group" aria-roledescription="carousel" aria-label="Ration app previews">
             <figure class="hero-slide is-active" id="hero-slide-0" data-slide="0" role="group" aria-roledescription="slide" aria-label="1 of 5" aria-hidden="false">
               <div class="browser">
@@ -346,49 +278,21 @@
             </figure>
           </div>
           <div class="hero-dots" role="group" aria-label="Choose a Ration app preview">
-            <button class="hero-dot is-active" type="button" aria-label="Show Ration Mail" aria-pressed="true" data-index="0" aria-controls="hero-slide-0">Mail</button>
-            <button class="hero-dot" type="button" aria-label="Show Ration Chat" aria-pressed="false" data-index="1" aria-controls="hero-slide-1">Chat</button>
-            <button class="hero-dot" type="button" aria-label="Show Ration Calendar" aria-pressed="false" data-index="2" aria-controls="hero-slide-2">Calendar</button>
-            <button class="hero-dot" type="button" aria-label="Show Ration Forms" aria-pressed="false" data-index="3" aria-controls="hero-slide-3">Forms</button>
-            <button class="hero-dot" type="button" aria-label="Show Ration Meet" aria-pressed="false" data-index="4" aria-controls="hero-slide-4">Meet</button>
+            <button class="hero-dot is-active" type="button" aria-label="Show Ration Mail" aria-pressed="true" data-index="0" aria-controls="hero-slide-0"></button>
+            <button class="hero-dot" type="button" aria-label="Show Ration Chat" aria-pressed="false" data-index="1" aria-controls="hero-slide-1"></button>
+            <button class="hero-dot" type="button" aria-label="Show Ration Calendar" aria-pressed="false" data-index="2" aria-controls="hero-slide-2"></button>
+            <button class="hero-dot" type="button" aria-label="Show Ration Forms" aria-pressed="false" data-index="3" aria-controls="hero-slide-3"></button>
+            <button class="hero-dot" type="button" aria-label="Show Ration Meet" aria-pressed="false" data-index="4" aria-controls="hero-slide-4"></button>
           </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-quicklinks">
-        <div class="container hero-quicklinks-inner">
-          <a href="#features">
-            Explore the modules
-            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
-          </a>
-          <a href="#deploy">
-            Compare editions
-            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
-          </a>
-          <a href="#cloud">
-            Cloud regions
-            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
-          </a>
-          <a href="#pricing">
-            Plans and pricing
-            <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
-          </a>
         </div>
       </div>
     </section>
 
     <section class="proof" aria-label="Ration at a glance">
       <div class="container">
-        <div class="proof-head">
-          <div data-reveal>
-            <p class="eyebrow">At a glance</p>
-            <h2 class="proof-title">One platform, sized for organisations that need control.</h2>
-          </div>
-          <div class="proof-top" data-reveal>
-            <span class="proof-badge"><svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg> Built in Africa</span>
-            <span class="proof-badge"><svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg> Sovereign by design</span>
-          </div>
+        <div class="proof-top" data-reveal>
+          <p class="proof-label">Trusted where control matters — government, defence and regulated industries.</p>
+          <span class="proof-badge"><svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg> Built in Africa</span>
         </div>
         <dl class="proof-grid">
           <div class="proof-item" data-reveal>
@@ -442,23 +346,6 @@
             <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg>
           </a>
         </div>
-        <aside class="apps-intro-aside" data-reveal>
-          <p class="apps-intro-aside-label">Built on one platform</p>
-          <dl class="intro-facts">
-            <div>
-              <dt>One directory</dt>
-              <dd>Every module reads from the same identity, groups and permissions.</dd>
-            </div>
-            <div>
-              <dt>One login</dt>
-              <dd>Single sign-on and multi-factor authentication across the workspace.</dd>
-            </div>
-            <div>
-              <dt>One audit trail</dt>
-              <dd>Grants, shares and moderation recorded in a single place.</dd>
-            </div>
-          </dl>
-        </aside>
       </div>
     </section>
 
@@ -481,7 +368,7 @@
       <div class="apps-viewport">
         <div class="apps-track" data-apps-track>
 
-          <div class="app-panel" id="module-mail" data-app-panel data-app="mail" style="--tint:#DDEBF4;--tint-soft:#F3F9FC;--accent:#006699">
+          <article class="app-panel" id="module-mail" data-app-panel data-app="mail" style="--tint:#DDEBF4;--tint-soft:#F3F9FC;--accent:#006699">
             <div class="app-panel-inner">
               <div class="app-panel-copy">
                 <div class="app-panel-meta">
@@ -529,9 +416,9 @@
                 </div>
               </div>
             </div>
-          </div>
+          </article>
 
-          <div class="app-panel" id="module-chat" data-app-panel data-app="chat" style="--tint:#DCEDE7;--tint-soft:#F2F9F6;--accent:#0F766E">
+          <article class="app-panel" id="module-chat" data-app-panel data-app="chat" style="--tint:#DCEDE7;--tint-soft:#F2F9F6;--accent:#0F766E">
             <div class="app-panel-inner">
               <div class="app-panel-copy">
                 <div class="app-panel-meta">
@@ -570,9 +457,9 @@
                 </div>
               </div>
             </div>
-          </div>
+          </article>
 
-          <div class="app-panel" id="module-meet" data-app-panel data-app="meet" style="--tint:#E6E1F4;--tint-soft:#F7F5FC;--accent:#5B4B9E">
+          <article class="app-panel" id="module-meet" data-app-panel data-app="meet" style="--tint:#E6E1F4;--tint-soft:#F7F5FC;--accent:#5B4B9E">
             <div class="app-panel-inner">
               <div class="app-panel-copy">
                 <div class="app-panel-meta">
@@ -613,9 +500,9 @@
                 </div>
               </div>
             </div>
-          </div>
+          </article>
 
-          <div class="app-panel" id="module-calendar" data-app-panel data-app="calendar" style="--tint:#F7E9D5;--tint-soft:#FCF7EF;--accent:#8A560E">
+          <article class="app-panel" id="module-calendar" data-app-panel data-app="calendar" style="--tint:#F7E9D5;--tint-soft:#FCF7EF;--accent:#8A560E">
             <div class="app-panel-inner">
               <div class="app-panel-copy">
                 <div class="app-panel-meta">
@@ -666,9 +553,9 @@
                 </div>
               </div>
             </div>
-          </div>
+          </article>
 
-          <div class="app-panel" id="module-contacts" data-app-panel data-app="contacts" style="--tint:#DDEDEE;--tint-soft:#F3F9F9;--accent:#0B5E66">
+          <article class="app-panel" id="module-contacts" data-app-panel data-app="contacts" style="--tint:#DDEDEE;--tint-soft:#F3F9F9;--accent:#0B5E66">
             <div class="app-panel-inner">
               <div class="app-panel-copy">
                 <div class="app-panel-meta">
@@ -710,9 +597,9 @@
                 </div>
               </div>
             </div>
-          </div>
+          </article>
 
-          <div class="app-panel" id="module-tasks" data-app-panel data-app="tasks" style="--tint:#F5E2E0;--tint-soft:#FBF5F4;--accent:#8C332B">
+          <article class="app-panel" id="module-tasks" data-app-panel data-app="tasks" style="--tint:#F5E2E0;--tint-soft:#FBF5F4;--accent:#8C332B">
             <div class="app-panel-inner">
               <div class="app-panel-copy">
                 <div class="app-panel-meta">
@@ -758,9 +645,9 @@
                 </div>
               </div>
             </div>
-          </div>
+          </article>
 
-          <div class="app-panel" id="module-notes" data-app-panel data-app="notes" style="--tint:#E8E3F3;--tint-soft:#F7F5FB;--accent:#6A4C93">
+          <article class="app-panel" id="module-notes" data-app-panel data-app="notes" style="--tint:#E8E3F3;--tint-soft:#F7F5FB;--accent:#6A4C93">
             <div class="app-panel-inner">
               <div class="app-panel-copy">
                 <div class="app-panel-meta">
@@ -803,9 +690,9 @@
                 </div>
               </div>
             </div>
-          </div>
+          </article>
 
-          <div class="app-panel" id="module-forms" data-app-panel data-app="forms" style="--tint:#DEE8F4;--tint-soft:#F3F8FC;--accent:#1D4E89">
+          <article class="app-panel" id="module-forms" data-app-panel data-app="forms" style="--tint:#DEE8F4;--tint-soft:#F3F8FC;--accent:#1D4E89">
             <div class="app-panel-inner">
               <div class="app-panel-copy">
                 <div class="app-panel-meta">
@@ -842,7 +729,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </article>
 
         </div>
       </div>
@@ -1066,7 +953,7 @@
           </div>
 
           <div class="deploy-slider" data-deploy-slider tabindex="0" aria-roledescription="carousel" aria-label="Ration deployment editions">
-            <div class="deploy-slide is-active" data-deploy-slide="0" role="group" aria-roledescription="slide" aria-label="SaaS Edition" aria-hidden="false">
+            <article class="deploy-slide is-active" data-deploy-slide="0" role="group" aria-roledescription="slide" aria-label="SaaS Edition" aria-hidden="false">
               <div class="deploy-slide-copy">
                 <span class="deploy-kicker">SaaS Edition</span>
                 <h3>We host it and run it for you</h3>
@@ -1089,9 +976,9 @@
                 </div>
                 <div class="deploy-visual-meta"><span>Edition</span><b>01</b></div>
               </div>
-            </div>
+            </article>
 
-            <div class="deploy-slide" data-deploy-slide="1" role="group" aria-roledescription="slide" aria-label="MSP Edition">
+            <article class="deploy-slide" data-deploy-slide="1" role="group" aria-roledescription="slide" aria-label="MSP Edition">
               <div class="deploy-slide-copy">
                 <span class="deploy-kicker">MSP Edition</span>
                 <h3>You host it, for your own customers</h3>
@@ -1114,9 +1001,9 @@
                 </div>
                 <div class="deploy-visual-meta"><span>Edition</span><b>02</b></div>
               </div>
-            </div>
+            </article>
 
-            <div class="deploy-slide" data-deploy-slide="2" role="group" aria-roledescription="slide" aria-label="On-Premise Edition">
+            <article class="deploy-slide" data-deploy-slide="2" role="group" aria-roledescription="slide" aria-label="On-Premise Edition">
               <div class="deploy-slide-copy">
                 <span class="deploy-kicker">On-Premise Edition</span>
                 <h3>Your hardware, your control</h3>
@@ -1139,7 +1026,7 @@
                 </div>
                 <div class="deploy-visual-meta"><span>Edition</span><b>03</b></div>
               </div>
-            </div>
+            </article>
           </div>
         </div>
       </div>
@@ -1355,22 +1242,17 @@
             <span><svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg>Sovereign by design</span>
             <span><svg class="icon" aria-hidden="true"><use href="#i-globe"></use></svg>Regional hosting</span>
           </div>
-          <div class="footer-social">
-            <a href="https://www.ration.works/contact" aria-label="Contact Ration"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg></a>
-            <a href="https://support.ration.works/" aria-label="Ration support"><svg class="icon" aria-hidden="true"><use href="#i-chat"></use></svg></a>
-            <a href="https://www.ration.works/" aria-label="Ration website"><svg class="icon" aria-hidden="true"><use href="#i-globe"></use></svg></a>
-          </div>
         </div>
 
         <div class="footer-cols">
           <div class="footer-col">
-            <h3>Platform</h3>
+            <h4>Platform</h4>
             <a href="https://www.ration.works/collaboration-platform">Collaboration platform</a>
             <a href="https://www.ration.works/corporate-messaging">Corporate messaging</a>
             <a href="https://www.ration.works/enterprise-collaboration">Enterprise collaboration</a>
           </div>
           <div class="footer-col">
-            <h3>Modules</h3>
+            <h4>Modules</h4>
             <a href="https://explore.ration.works/mail">Business email</a>
             <a href="https://explore.ration.works/chat">Chat</a>
             <a href="https://explore.ration.works/calendar">Calendar</a>
@@ -1378,13 +1260,13 @@
             <a href="https://support.ration.works/guides/">Ration Docs</a>
           </div>
           <div class="footer-col">
-            <h3>Assurance</h3>
+            <h4>Assurance</h4>
             <a href="https://www.ration.works/secure-messaging">Secure messaging</a>
             <a href="https://www.ration.works/sovereign-collaboration">Sovereign collaboration</a>
             <a href="https://www.ration.works/government-collaboration">Government collaboration</a>
           </div>
           <div class="footer-col">
-            <h3>Company</h3>
+            <h4>Company</h4>
             <a href="#pricing">Pricing</a>
             <a href="https://support.ration.works/">Support</a>
             <a href="https://www.ration.works/contact">Contact</a>
@@ -1398,7 +1280,7 @@
         <div class="footer-legal">
           <a href="https://www.ration.works/privacy">Privacy</a>
           <a href="https://www.ration.works/legal">Legal notice</a>
-          <span class="footer-locale">English (NG)</span>
+          <span>English (NG)</span>
         </div>
       </div>
     </div>
@@ -1408,6 +1290,5 @@
   <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
   <script src="assets/vendor/ScrollToPlugin.min.js" defer></script>
   <script src="assets/js/main.js" defer></script>
-  <script src="assets/js/brand.js" defer></script>
 </body>
 </html>
