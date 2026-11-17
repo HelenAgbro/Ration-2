@@ -1288,10 +1288,10 @@ h1, h2, h3, h4, p, dl, dd { margin: 0; }
   stroke-width: 1.8;
 }
 .audience-card:hover .audience-icon {
-  background: #006699;
-  border-color: #006699;
-  color: #fff;
-  box-shadow: 0 0 0 2px #fff, inset 0 1px 0 rgba(255, 255, 255, .22), 0 10px 20px -14px rgba(0, 25, 40, .55);
+  background: #fff;
+  border-color: #fff;
+  color: #006699;
+  box-shadow: inset 0 1px 0 #fff, 0 10px 20px -14px rgba(0, 51, 77, .55);
 }
 .audience-card:hover .audience-ideal { border-top-color: rgba(255, 255, 255, .3); color: #D9E7F0; }
 .audience-card:hover .audience-ideal span { color: #FFFFFF; }
