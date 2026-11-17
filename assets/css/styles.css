@@ -34,6 +34,7 @@
   --blue-dark: #00547D;
   --blue-soft: #E8F1F7;
   --steel: #5599BB;
+  --teal: #0F766E;
   --amber: #FFB343;
   --line: #DEE7EC;
   --line-soft: #EAF1F4;
@@ -1222,7 +1223,27 @@ h1, h2, h3, h4, p, dl, dd { margin: 0; }
 /* ==========================================================================
    Audience
    ========================================================================== */
-.audience { padding: clamp(88px, 10vw, 128px) 0; background: #fff; }
+.audience { position: relative; padding: clamp(88px, 10vw, 128px) 0; background: #fff; overflow: hidden; }
+.audience .container { position: relative; z-index: 2; }
+.audience-rings {
+  position: absolute;
+  right: -190px;
+  top: 50%;
+  width: min(720px, 70vw);
+  transform: translateY(-50%);
+  color: var(--blue);
+  opacity: .09;
+  pointer-events: none;
+  z-index: 0;
+}
+.audience-rings svg { width: 100%; height: auto; }
+.audience-rings circle { fill: none; stroke: currentColor; stroke-width: 1.1; }
+@media (max-width: 900px) {
+  .audience-rings { right: -160px; width: min(560px, 90vw); opacity: .07; }
+}
+@media (max-width: 640px) {
+  .audience-rings { right: -140px; width: 420px; opacity: .06; }
+}
 .audience .section-head { grid-template-columns: 1.1fr .9fr; }
 .audience .section-title { max-width: 620px; }
 .audience-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -1232,9 +1253,26 @@ h1, h2, h3, h4, p, dl, dd { margin: 0; }
   border: 1px solid #E1EAEF;
   border-radius: 18px;
   background: #fff;
-  transition: border-color .3s ease, box-shadow .3s ease, transform .3s ease;
+  transition: background-color .3s ease, border-color .3s ease, box-shadow .3s ease, transform .3s ease, color .3s ease;
 }
-.audience-card:hover { transform: translateY(-2px); border-color: #C3D8E2; box-shadow: 0 26px 52px -36px rgba(0, 43, 64, .38); }
+.audience-card h3,
+.audience-card > p,
+.audience-card .audience-icon,
+.audience-card .audience-ideal,
+.audience-card .audience-note { transition: color .3s ease, background-color .3s ease, border-color .3s ease; }
+.audience-card:hover {
+  transform: translateY(-2px);
+  background: var(--teal);
+  border-color: var(--teal);
+  color: #fff;
+  box-shadow: 0 26px 52px -36px rgba(15, 118, 110, .55);
+}
+.audience-card:hover h3 { color: #fff; }
+.audience-card:hover > p { color: rgba(255, 255, 255, .92); }
+.audience-card:hover .audience-icon { background: rgba(255, 255, 255, .16); border-color: rgba(255, 255, 255, .24); color: #fff; }
+.audience-card:hover .audience-ideal { border-top-color: rgba(255, 255, 255, .32); color: rgba(255, 255, 255, .92); }
+.audience-card:hover .audience-ideal span { color: #D7F7EF; }
+.audience-card:hover .audience-note { background: #fff; border-color: #fff; color: #0B5E66; }
 .audience-icon { display: grid; place-items: center; width: 42px; height: 42px; margin-bottom: 18px; border: 1px solid #E0EBF1; border-radius: 11px; background: #F1F7FA; color: var(--blue); }
 .audience-icon .icon { width: 20px; height: 20px; }
 .audience-card h3 { font-size: 19px; font-weight: 640; line-height: 1.25; letter-spacing: -.022em; color: var(--navy); }
