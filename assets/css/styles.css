@@ -1231,17 +1231,17 @@ h1, h2, h3, h4, p, dl, dd { margin: 0; }
   width: min(720px, 70vw);
   transform: translateY(-50%);
   color: #E8710A;
-  opacity: .07;
+  opacity: .12;
   pointer-events: none;
   z-index: 0;
 }
 .audience-rings svg { width: 100%; height: auto; }
-.audience-rings circle { fill: none; stroke: currentColor; stroke-width: 1.1; }
+.audience-rings circle { fill: none; stroke: currentColor; stroke-width: 1.25; }
 @media (max-width: 900px) {
-  .audience-rings { right: -160px; width: min(560px, 90vw); opacity: .07; }
+  .audience-rings { right: -160px; width: min(560px, 90vw); opacity: .1; }
 }
 @media (max-width: 640px) {
-  .audience-rings { right: -140px; width: 420px; opacity: .06; }
+  .audience-rings { right: -140px; width: 420px; opacity: .09; }
 }
 .audience .section-head { grid-template-columns: 1.1fr .9fr; }
 .audience .section-title { max-width: 620px; }
